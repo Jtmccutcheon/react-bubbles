@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const CORS = require("cors");
-
+const port = 5000
 const app = express();
 const token =
   "ahuBHejkJJiMDhmODZhZi0zaeLTQ4ZfeaseOGZgesai1jZWYgrTA07i73Gebhu98";
@@ -154,7 +154,7 @@ app.delete("/api/colors/:id", authenticator, (req, res) => {
   res.status(202).send(req.params.id);
 });
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("App is working 👍");
 });
 
